@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Votación para Representante</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Votación para Representante</h1>
+
+        <div id="admin-section">
+            <h2>Registro de Aspirantes</h2>
+            <form id="aspirant-form">
+                <label for="nombre-aspirante">Nombre:</label>
+                <input type="text" id="nombre-aspirante" required><br><br>
+
+                <label for="foto-aspirante">Foto (URL):</label>
+                <input type="url" id="foto-aspirante"><br><br>
+
+                <label for="propuestas-aspirante">Propuestas:</label><br>
+                <textarea id="propuestas-aspirante" rows="4" required></textarea><br><br>
+
+                <button type="button" onclick="registrarAspirante()">Registrar Aspirante</button>
+            </form>
+            <div id="aspirantes-registrados">
+                <h3>Aspirantes Registrados:</h3>
+                <ul id="lista-aspirantes">
+                    </ul>
+            </div>
+            <button id="iniciar-votacion-btn" onclick="iniciarVotacion()" disabled>Iniciar Votación</button>
+        </div>
+
+        <div id="votation-section" style="display: none;">
+            <h2>Votación</h2>
+            <form id="voter-form">
+                <label for="nombre-votante">Nombre:</label>
+                <input type="text" id="nombre-votante" required><br><br>
+
+                <label for="curso-votante">Curso:</label>
+                <input type="text" id="curso-votante" required><br><br>
+
+                <label for="codigo-votante">Código Estudiantil (6 dígitos):</label>
+                <input type="text" id="codigo-votante" pattern="[0-9]{6}" required><br><br>
+
+                <button type="button" onclick="mostrarCandidatos()">Continuar a Votación</button>
+            </form>
+
+            <div id="candidates-section" style="display: none;">
+                <h3>Candidatos:</h3>
+                <div id="lista-candidatos">
+                    </div>
+                <button type="button" onclick="registrarVoto()" disabled id="votar-btn">Registrar Voto</button>
+                <p id="mensaje-votacion"></p>
+            </div>
+        </div>
+
+        <div id="results-section">
+            <h2>Resultados de Votación</h2>
+            <ul id="resultados-lista">
+                </ul>
+        </div>
+
+        <button id="finalizar-votacion-btn" onclick="finalizarVotacion()">Finalizar Votación</button>
+
+        <div id="votacion-finalizada-mensaje" class="votacion-finalizada" style="display: none;">
+            <h2>La votación ha finalizado.</h2>
+            <p>Los resultados finales son los siguientes:</p>
+            <ul id="resultados-finales-lista">
+                </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
