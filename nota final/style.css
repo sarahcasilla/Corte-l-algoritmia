@@ -1,0 +1,126 @@
+/* Fuente más moderna y suavizada */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.calculator {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    transition: transform 0.3s ease;
+}
+
+.calculator:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 25px;
+    font-weight: 600;
+    position: relative;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+    margin: 10px auto;
+    border-radius: 3px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+input:focus {
+    border-color: #4facfe;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.2);
+}
+
+button {
+    background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 242, 254, 0.3);
+}
+
+.result {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f7fa 100%);
+    border-radius: 10px;
+    border-left: 4px solid #4facfe;
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.result p {
+    margin: 0 0 10px 0;
+    color: #333;
+    line-height: 1.5;
+}
+
+.result h2 {
+    color: #4facfe;
+    margin: 15px 0;
+    font-size: 28px;
+    text-align: center;
+}
+
+.error {
+    color: #ff4757;
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: 500;
+}

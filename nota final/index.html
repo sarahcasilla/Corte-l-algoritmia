@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calcula la nota que necesitas en tu examen final para aprobar el semestre">
+    <title>📊 Calculadora de Nota Final</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>📊 Calculadora de Nota Final</h1>
+        
+        <div class="form-group">
+            <label for="nota1">Nota del Primer Corte (30%):</label>
+            <input type="number" id="nota1" min="1.0" max="5.0" step="0.1" placeholder="Ej: 3.5">
+            <div id="error1" class="error"></div>
+        </div>
+        
+        <div class="form-group">
+            <label for="nota2">Nota del Segundo Corte (30%):</label>
+            <input type="number" id="nota2" min="1.0" max="5.0" step="0.1" placeholder="Ej: 4.0">
+            <div id="error2" class="error"></div>
+        </div>
+        
+        <div class="form-group">
+            <label for="notaDeseada">Nota Mínima Deseada en el Semestre:</label>
+            <input type="number" id="notaDeseada" min="1.0" max="5.0" step="0.1" value="3.0">
+            <div id="errorDeseada" class="error"></div>
+        </div>
+        
+        <button onclick="calcularNotaNecesaria()">🔎 Calcular Nota Necesaria</button>
+        
+        <div id="resultado" class="result">
+            <p>Para obtener <strong><span id="notaObjetivo"></span></strong> en el semestre, necesitas sacar al menos:</p>
+            <h2><span id="notaNecesaria"></span></h2>
+            <p>en tu examen final (que vale 40% de la nota total).</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
