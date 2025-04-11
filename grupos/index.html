@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Grupos Aleatorios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generador de Grupos Aleatorios</h1>
+
+        <div class="upload-section">
+            <label for="file-upload" class="file-upload-button">Seleccionar Archivo (TXT o CSV)</label>
+            <input type="file" id="file-upload" accept=".txt,.csv">
+            <p id="file-name"></p>
+        </div>
+
+        <div class="list-section">
+            <h2>Lista de Estudiantes</h2>
+            <table id="student-table">
+                <thead>
+                    <tr>
+                        <th>Nombre Completo</th>
+                        <th>Género</th>
+                    </tr>
+                </thead>
+                <tbody id="student-list">
+                    </tbody>
+            </table>
+        </div>
+
+        <button id="generate-groups-button" disabled>Generar Grupos</button>
+
+        <div class="groups-section">
+            <h2>Grupos Generados</h2>
+            <div id="groups-container">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

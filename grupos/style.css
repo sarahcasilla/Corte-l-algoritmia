@@ -1,0 +1,101 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+.upload-section, .list-section, .groups-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.file-upload-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#file-upload {
+    display: none;
+}
+
+#file-name {
+    font-style: italic;
+    color: #777;
+}
+
+#student-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#student-table th, #student-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#student-table th {
+    background-color: #eee;
+}
+
+#generate-groups-button {
+    display: block;
+    width: 200px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px auto;
+    font-size: 16px;
+}
+
+#generate-groups-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#groups-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.group {
+    border: 1px solid #bbb;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    width: calc(33% - 15px); /* Aproximadamente 3 grupos por fila */
+    box-sizing: border-box;
+}
+
+.group h3 {
+    margin-top: 0;
+    color: #333;
+}
