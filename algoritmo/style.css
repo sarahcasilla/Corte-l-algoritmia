@@ -1,0 +1,118 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f8e8ff; /* Rosa claro de fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    color: #8a2be2; /* Morado */
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#nueva-tarea {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #dda0dd; /* Rosa medio para el borde */
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+}
+
+#agregar-tarea {
+    background-color: #ba55d3; /* Morado medio */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#agregar-tarea:hover {
+    background-color: #9932cc; /* Morado oscuro */
+}
+
+#lista-tareas {
+    list-style-type: none;
+    padding: 0;
+}
+
+#lista-tareas li {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#lista-tareas li:last-child {
+    border-bottom: none;
+}
+
+#lista-tareas li input[type="checkbox"] {
+    margin-right: 10px;
+    /* Ocultar el checkbox por defecto para personalizarlo */
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #dda0dd; /* Borde rosa para el checkbox no marcado */
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lista-tareas li input[type="checkbox"]:checked {
+    background-color: #5cb85c; /* Verde para el checkbox marcado */
+    border-color: #5cb85c;
+}
+
+#lista-tareas li input[type="checkbox"]:checked::before {
+    content: "\2713"; /* Símbolo de check blanco */
+    color: white;
+    font-size: 14px;
+}
+
+#lista-tareas li span {
+    flex-grow: 1;
+}
+
+#lista-tareas li.completada span {
+    text-decoration: line-through;
+    color: #888;
+}
+
+#lista-tareas li button.eliminar-tarea {
+    background-color: #e75480; /* Rosa fuerte para eliminar */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+#lista-tareas li button.eliminar-tarea:hover {
+    background-color: #d11a5b; /* Rosa oscuro para el hover de eliminar */
+}
