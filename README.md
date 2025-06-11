@@ -1,4 +1,4 @@
-# 👩‍💻 Fundamentos de Algoritmia – Bitácora de Aprendizaje 📘
+# 👩‍💻 Fundamentos de Algoritmia – Sara Contreras Casilla 📘
 
 ¡Hola! Soy estudiante de **Licenciatura en Informática** en la **Universidad de Córdoba**, y este repositorio refleja mi proceso de aprendizaje en el curso de **Fundamentos de Algoritmia**, visto durante el **tercer semestre**.
 
